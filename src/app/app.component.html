@@ -1,0 +1,21 @@
+  <div class="container">
+    <div class="text-left btn-play" #btnPlay >
+      <button class="button" (click)="play()"><span>Play </span></button>
+  </div>
+  <div class="display-point">
+    <div class="highest">High: {{highest}}</div>
+    <div class="scorce">Score: {{point}}</div>
+  </div>
+    <div class="grid ">   
+        <div class="col-2" *ngFor="let item of notes;let i=index;" >
+          <div class="btn" #btn (click)="onClick(i)"></div>
+        </div>
+    </div>
+    <div class="text-center hide game-over" #gameOver>
+      <button pButton pRipple type="button" class="p-button-rounded p-button-danger" icon="pi pi-times" style="margin-right: 8px;"></button>
+      <button pButton pRipple type="button" icon="pi pi-replay" class="p-button-rounded p-button-primary" (click)="play()" #rePlay></button>
+    </div>
+    <div class="text-center score" #correct>
+      
+    </div>
+  </div>
